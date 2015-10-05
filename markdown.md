@@ -27,6 +27,11 @@ class: center, middle
 
 ---
 class: center, middle
+# Immutable infrastructure
+# Horizontal scaling
+
+---
+class: center, middle
 .left-column[
 ### Microservices stack
 ]
@@ -69,6 +74,8 @@ class: center, middle
 ]
 .right-column[
 ![Graylog](images/graylog.png)
+
+![Elasticsearch](images/elasticsearch.png)
 ]
 
 ---
@@ -85,12 +92,33 @@ class: center, middle
 ]
 
 ---
-class: center, middle,  inverse
-# Immutable infrastructure
-
----
 class: center, middle, inverse
 # Demo
+
+---
+class:  middle
+
+## Infrastructure
+
+```sh
+docker-compose -f mesos.yml up -d
+docker-compose -f infrastructure.yml up -d
+```
+* Configure Graylog http://localhost:9000/
+* Test Mesos http://localhost:5050/
+* Test Marathon http://localhost:8080/
+* Test Traefik http://localhost:8081/
+* Test whoami deployment
+
+```sh
+curl -X POST -H "Accept: application/json" -H "Content-Type: application/json" http://localhost:8080/v2/apps -d @whoami.json
+```
+
+## Apps
+
+```sh
+curl -X PUT -H "Accept: application/json" -H "Content-Type: application/json" http://localhost:8080/v2/groups -d @microservices.json
+```
 
 ---
 class: center, middle, inverse
