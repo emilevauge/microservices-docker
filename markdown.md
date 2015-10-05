@@ -81,8 +81,6 @@ class: center, middle
 ### Reverse proxy
 ]
 .right-column[
-![traefik](images/traefik.logo.white.svg)
-
 ![traefik](images/traefik.architecture.svg)
 ]
 
