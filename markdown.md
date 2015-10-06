@@ -38,6 +38,8 @@ class: center, middle
 
 ---
 class: center, middle
+# Pets vs. Cattle
+# Resiliency
 # Immutable infrastructure
 # Horizontal scaling
 
