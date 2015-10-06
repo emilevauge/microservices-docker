@@ -8,6 +8,17 @@ with
 ![Docker](images/small_v-dark-trans.png)
 
 Emile Vauge
+
+---
+class: center, middle
+# In brief...
+## Spring cloud
+## Netflix OSS
+## Docker
+## Mesos
+## Graylog
+## Traefik
+
 ---
 layout: false
 class: center, middle
